@@ -19,39 +19,10 @@ padding-vertical.px: 20
 padding-horizontal.px if { ftd.device == "mobile" }: 20
 background.solid: $inherited.colors.background.base
 
--- ms-docs:
-
--- hero: Title of the hero component
-cta-text-1: Get Started
-cta-link-1: link-to-get-started-page/
-cta-text-2: Shop now
-cta-link-2: link-to-shop-now/
-author: $amitu
-image: $assets.files.static.wireframes.image-icon.svg
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna.
--- end: ms-docs
-
--- end: ftd.column
-
-
-
-
-
-
-
-
--- component ms-docs:
-children uis:
-
--- ftd.column:
-width: fill-container
-
--- docs: Hero component
+-- ms-docs: Hero component
 ref: $assets.files.static.wireframes.hero.jpg
 
--- docs.body:
+-- ms-docs.body:
 
 \-- import: fifthtry.github.io/common
 
@@ -71,7 +42,7 @@ image: $assets.files.static.hero.jpg
 
 Some body of the hero component
 
--- docs.info:
+-- ms-docs.info:
 
 A hero component is a graphical element commonly used in web design to make a 
 bold visual statement and grab the user's attention. The hero component typically 
@@ -87,8 +58,50 @@ components are often used in marketing and advertising contexts, but can be
 found on a variety of websites, from blogs and news sites to e-commerce and 
 corporate websites.
 
+-- hero: Title of the hero component
+cta-text-1: Get Started
+cta-link-1: link-to-get-started-page/
+cta-text-2: Shop now
+cta-link-2: link-to-shop-now/
+author: $amitu
+image: $assets.files.static.wireframes.image-icon.svg
 
--- ms-docs.uis.0:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna.
+
+-- end: ms-docs
+
+-- end: ftd.column
+
+
+
+
+
+
+
+
+-- component ms-docs:
+caption title:
+body body:
+string info:
+ftd.image-src ref: 
+children component:
+
+-- ftd.column:
+width: fill-container
+
+-- docs: $ms-docs.title
+ref: $ms-docs.ref
+
+-- docs.body:
+
+$ms-docs.body
+
+-- docs.info:
+
+$ms-docs.info
+
+-- ms-docs.component.0:
 
 -- end: docs
 
@@ -154,13 +167,6 @@ children: $docs.component
 ;; End
 
 -- end: docs
-
-
-
-
-
-
-
 
 
 
@@ -269,7 +275,6 @@ color: $inherited.colors.text
 
 -- end: ftd.column
 
-
 -- ftd.row:
 spacing.fixed.px: 60
 
@@ -297,9 +302,14 @@ link: $hero.cta-link-2
 
 -- end: ftd.row
 
-
-
 -- end: ftd.column
 
 -- end: hero
+
+
+
+
+
+
+
 
