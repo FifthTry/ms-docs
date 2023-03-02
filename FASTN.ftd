@@ -5,8 +5,6 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/ms-docs/main
 
 -- fastn.dependency: fifthtry.github.io/code-block
 -- fastn.dependency: fifthtry.github.io/typography
--- fastn.dependency: fifthtry.github.io/common
 
 -- fastn.auto-import: fifthtry.github.io/code-block as cb
 -- fastn.auto-import: fifthtry.github.io/typography as tf
--- fastn.auto-import: fifthtry.github.io/common
