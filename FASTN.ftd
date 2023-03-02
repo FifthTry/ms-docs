@@ -1,0 +1,10 @@
+-- import: fastn
+
+-- fastn.package: fifthtry.github.io/ms-docs
+download-base-url: https://raw.githubusercontent.com/fifthtry/ms-docs/main
+
+-- fastn.dependency: fifthtry.github.io/doc-site as ds
+-- fastn.dependency: fifthtry.github.io/bling as bling
+
+-- fastn.auto-import: bling/chat as chat
+-- fastn.auto-import: ds
