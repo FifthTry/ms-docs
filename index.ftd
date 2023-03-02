@@ -166,12 +166,12 @@ children: $docs.component
 
 -- component hero:
 caption title:
-optional string cta-text-1: Get Started
-optional string cta-link-1: link-to-get-started-page/
-optional string cta-text-2: Shop now
-optional string cta-link-2: link-to-shop-now/
+optional string cta-text-1:
+optional string cta-link-1:
+optional string cta-text-2:
+optional string cta-link-2:
 optional $common.author-meta author: 
-ftd.image-src image: $assets.files.static.hero.jpg
+optional ftd.image-src image: 
 optional body body:
 
 -- ftd.column:
