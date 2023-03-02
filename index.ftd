@@ -1,9 +1,15 @@
 -- import: fifthtry.github.io/ms-docs/assets
 
 
+-- common.author-meta amitu: Amit Upadhyay
+profile: CEO
+bio-url: blog-authors/amitu/
+image: https://fifthtry.github.io/bling/-/fifthtry.github.io/bling/static/amitu.jpg
+company: FifthTry Pvt. Ltd.
 
-
-
+Founder CEO of FifthTry Private Limited. FifthTry is backed by Y Combinators. 
+A Banglore based start-up having development center at 91Springboard, JP Nagar,
+Banglore.
 
 
 -- ftd.column:
@@ -15,17 +21,16 @@ background.solid: $inherited.colors.background.base
 
 -- ms-docs:
 
--- ft.hero-section: Programming Language For Prose
-image: https://fifthtry.github.io/fastn-ui/-/fifthtry.github.io/fastn-ui/static/hero-image-dark.svg
-cta-left-text: Explore More
-cta-right-text: How to Use
+-- hero: Title of the hero component
+cta-text-1: Get Started
+cta-link-1: link-to-get-started-page/
+cta-text-2: Shop now
+cta-link-2: link-to-shop-now/
+author: $amitu
+image: $assets.files.static.wireframes.image-icon.svg
 
--- ft.hero-section.info:
-
-At nulla tristique facilisis augue. Lectus diam dignissim erat blandit pellentesque egestas nulla.
-
--- end: ft.hero-section
-
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna.
 -- end: ms-docs
 
 -- end: ftd.column
@@ -50,13 +55,13 @@ ref: $assets.files.static.wireframes.hero.jpg
 
 \-- import: fifthtry.github.io/common
 
-\-- $common.author-meta amitu: Amit Upadhyay
+\-- common.author-meta amitu: Amit Upadhyay
 profile: CEO
 bio-url: blog-authors/amitu/
 image: $assets.files.static.authors.amitu.jpg
 company: FifthTry Pvt. Ltd.
 
-\-- hero: hero title of the hero component
+\-- hero: Hero title of the hero component
 cta-text-1: Get Started
 cta-link-1: link-to-get-started-page/
 cta-text-2: Shop now
@@ -149,3 +154,143 @@ children: $docs.component
 ;; End
 
 -- end: docs
+
+
+
+
+
+
+
+
+
+
+-- component hero:
+caption title:
+optional string cta-text-1: Get Started
+optional string cta-link-1: link-to-get-started-page/
+optional string cta-text-2: Shop now
+optional string cta-link-2: link-to-shop-now/
+optional $common.author-meta author: 
+ftd.image-src image: $assets.files.static.hero.jpg
+optional body body:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 60
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: center
+
+-- ftd.image: 
+if: { hero.image != NULL }
+src: $hero.image
+max-width: fill-container
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 40
+spacing.fixed.px: 40
+
+-- tf.h1: $hero.title
+
+$hero.body
+
+
+-- ftd.column:
+if: { !ftd.is_empty(hero.author) }
+
+-- ftd.row:
+spacing.fixed.px: 18
+align-content: center
+
+-- ftd.image:
+src: $hero.author.image
+width.fixed.px: 64
+height.fixed.px: 64
+border-radius.px: 500
+
+-- ftd.column:
+
+-- ftd.text: $hero.author.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+-- ftd.row:
+spacing.fixed.px: 10
+
+-- ftd.text: $hero.author.profile
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+-- ftd.text: $hero.author.company
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 10
+
+-- ftd.text: 👍
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+-- ftd.text: 12
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+-- ftd.text: 👍
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+-- ftd.text: 0
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+
+-- ftd.row:
+spacing.fixed.px: 60
+
+-- ftd.text: $hero.cta-text-1
+role: $inherited.types.button-medium
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.background.step-2
+padding-horizontal.px: 8
+padding-vertical.px: 8
+border-radius.px: 6
+link: $hero.cta-link-1
+
+-- ftd.text: $hero.cta-text-2
+role: $inherited.types.button-medium
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.background.step-2
+padding-horizontal.px: 8
+padding-vertical.px: 8
+border-radius.px: 6
+link: $hero.cta-link-2
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+-- end: ftd.column
+
+-- end: hero
+
