@@ -19,6 +19,32 @@ padding-vertical.px: 20
 padding-horizontal.px if { ftd.device == "mobile" }: 20
 background.solid: $inherited.colors.background.base
 
+-- hero-docs: 
+
+-- hero: Title of the hero component
+cta-text-1: Get Started
+cta-link-1: link-to-get-started-page/
+cta-text-2: Shop now
+cta-link-2: link-to-shop-now/
+author: $amitu
+image: $assets.files.static.wireframes.image-icon.svg
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna.
+
+-- end: hero-docs
+
+-- end: ftd.column
+
+
+
+
+-- component hero-docs:
+children component:
+
+-- ftd.column:
+width: fill-container
+
 -- ms-docs: Hero component
 ref: $assets.files.static.wireframes.hero.jpg
 
@@ -58,20 +84,15 @@ components are often used in marketing and advertising contexts, but can be
 found on a variety of websites, from blogs and news sites to e-commerce and 
 corporate websites.
 
--- hero: Title of the hero component
-cta-text-1: Get Started
-cta-link-1: link-to-get-started-page/
-cta-text-2: Shop now
-cta-link-2: link-to-shop-now/
-author: $amitu
-image: $assets.files.static.wireframes.image-icon.svg
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna.
-
 -- end: ms-docs
 
+-- hero-docs.component.0:
+
 -- end: ftd.column
+
+
+-- end: hero-docs
+
 
 
 
@@ -85,7 +106,6 @@ caption title:
 body body:
 string info:
 ftd.image-src ref: 
-children component:
 
 -- ftd.column:
 width: fill-container
@@ -100,8 +120,6 @@ $ms-docs.body
 -- docs.info:
 
 $ms-docs.info
-
--- ms-docs.component.0:
 
 -- end: docs
 
