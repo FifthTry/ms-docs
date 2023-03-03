@@ -7,13 +7,14 @@
 
 
 -- component hero-docs:
+optional ftd.image-src ref: $assets.files.static.wireframes.hero.jpg
 children component:
 
 -- ftd.column:
 width: fill-container
 
 -- ms-docs: `-- hero`
-ref: $assets.files.static.wireframes.hero.jpg
+ref: $hero-docs.ref
 
 -- ms-docs.body:
 
