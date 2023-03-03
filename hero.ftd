@@ -6,6 +6,9 @@
 -- component hero-docs:
 ftd.ui list components:
 
+-- ftd.column:
+width: fill-container
+
 -- ds.h1: Hero Components
 
 -- ds.h2: Hero Without Image
@@ -18,8 +21,7 @@ ftd.ui list components:
 
 Rendered:
 
--- $docs.components.0:
-
+-- hero-docs.components.0:
 
 
 -- ds.h2: Hero With Image
@@ -32,7 +34,9 @@ Rendered:
 
 Rendered:
 
--- $docs.components.1
+-- hero-docs.components.1:
+
+-- end: ftd.column
 
 -- end: hero-docs
 
