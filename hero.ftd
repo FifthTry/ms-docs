@@ -1,0 +1,46 @@
+
+
+
+
+
+-- component hero-docs:
+ftd.ui list components:
+
+-- ds.h1: Hero Components
+
+-- ds.h2: Hero Without Image
+
+-- ds.code:
+
+\-- hero-without-image:
+
+-- ds.markdown:
+
+Rendered:
+
+-- $docs.components.0:
+
+
+
+-- ds.h2: Hero With Image
+
+-- ds.code:
+
+\-- hero-with-image
+
+-- ds.markdown:
+
+Rendered:
+
+-- $docs.components.1
+
+-- end: hero-docs
+
+
+
+
+
+
+
+
+
