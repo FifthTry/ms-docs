@@ -1,0 +1,38 @@
+
+
+
+
+
+-- component quote-docs:
+ftd.ui list components:
+
+-- ftd.column:
+width: fill-container
+
+-- ds.h1: Quotes
+
+-- ds.h2: Charcol 
+
+-- ds.code:
+
+\-- charcol:
+
+-- ds.markdown:
+
+Rendered:
+
+-- quote-docs.components.0:
+
+
+-- end: ftd.column
+
+-- end: quote-docs
+
+
+
+
+
+
+
+
+
