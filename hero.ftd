@@ -1,21 +1,82 @@
+-- import: fifthtry.github.io/ms-docs/assets
+
+-- ftd.color code-bg-light:
+light: #2b303b
+dark: #18181b
+
+-- ftd.color code-bg-dark:
+light: #18181b
+dark: #2b303b
+
+-- void download-text(filename,text):
+string filename:
+string text:
+
+download_text(filename, text)
+
+
+-- ftd.type code-font-type:
+line-height.px: 24
+size.px: 16
+letter-spacing.px: 0
+font-family: monospace
+weight: 400
+
+-- ftd.responsive-type code-font:
+desktop: $code-font-type
+mobile: $code-font-type
+
 
 
 
 
 
 -- component hero-docs:
-ftd.ui list components:
+children components:
+optional string package-name: 
+optional string code-title:
+optional string import-line:
+optional string import-title:
 
 -- ftd.column:
 width: fill-container
+spacing.fixed.px: 24
 
 -- ds.h1: Hero Components
 
+-- code-block: $hero-docs.code-title 
+lang: ftd
+package-name: $hero-docs.package-name
+
+-- ds.markdown:
+
+After adding above line into your `FASTN.ftd` file. Add below line to your `ftd`
+file where you want to use this component.
+
+-- code-block: $hero-docs.import-title
+lang: ftd
+package-name: $hero-docs.import-line
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 24
+
 -- ds.h2: Hero Without Image
 
--- ds.code:
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
 
-\-- hero-without-image:
+-- ds.code:
+lang: ftd
+
+\-- hero.hero-without-image: Title of the hero component
+cta-text-1: Get Started
+cta-link-1: /
+cta-text-2: Shop now
+cta-link-2: /
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna.
 
 -- ds.markdown:
 
@@ -23,18 +84,39 @@ Rendered:
 
 -- hero-docs.components.0:
 
+-- end: ftd.column
+
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
 
 -- ds.h2: Hero With Image
 
--- ds.code:
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
 
-\-- hero-with-image
+-- ds.code:
+lang: ftd
+
+\-- hero.hero-with-image: Title of the hero component
+cta-text-1: Get Started
+cta-link-1: /
+cta-text-2: Shop now
+cta-link-2: /
+image: $assets.files.hero-image.svg
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna.
 
 -- ds.markdown:
 
 Rendered:
 
 -- hero-docs.components.1:
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -48,3 +130,149 @@ Rendered:
 
 
 
+-- component code-block:
+optional caption caption:
+optional string download:
+string package-name:
+string lang:
+boolean copy: true
+string $copy-text: null
+boolean $mouse-in: false
+boolean $download-mouse-in: false
+optional integer max-height:
+optional integer max-width:
+
+-- ftd.column:
+width: fill-container
+
+
+-- ftd.row:
+if: { $code-block.caption != NULL || $code-block.download != NULL || code-block.copy }
+width: fill-container
+background.solid: $inherited.colors.background.step-1
+padding-top.px if { $code-block.caption != NULL }: 10
+padding-bottom.px if { $code-block.caption != NULL }: 10
+padding-left.px if { $code-block.caption != NULL }: 20
+padding-right.px if { $code-block.caption != NULL }: 20
+border-top-left-radius.px: 4
+border-top-right-radius.px: 4
+max-width.fixed.px if { code-block.max-width != NULL }: $code-block.max-width
+
+-- ftd.row:
+if: { $code-block.caption != NULL }
+align-self: start
+width: fill-container
+
+-- ftd.text: $code-block.caption
+if: { $code-block.caption != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { code-block.copy }
+spacing.fixed.px: 10
+align-content: right
+align-self: end
+$on-mouse-leave$: $ftd.set-string($a = $code-block.copy-text, v = null)
+anchor: parent
+top.px: 12
+right.px: 20
+right.px if {code-block.download!= NULL}: 56
+
+
+-- ftd.image:
+if: { code-block.copy-text == "null" }
+src: $assets.files.static.copy.svg
+src if { code-block.mouse-in }: $assets.files.static.copy-hover.svg
+$on-mouse-enter$: $ftd.set-bool($a = $code-block.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $code-block.mouse-in, v = false)
+$on-click$: $ftd.copy-to-clipboard(a = $code-block.package-name)
+$on-click$: $ftd.set-string($a = $code-block.copy-text, v = Copied!)
+width.fixed.px: 18
+
+
+-- ftd.image:
+if: { code-block.copy-text != "null" }
+src: $assets.files.static.tick.svg
+width.fixed.px: 18
+
+-- ftd.text: $code-block.copy-text
+if: { code-block.copy-text != "null" }
+role: $inherited.types.copy-regular
+color: $inherited.colors.border
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { $code-block.download != NULL }
+align-content: right
+align-self: end
+padding-left.px: 10
+anchor: parent
+top.px: 12
+right.px: 20
+
+
+-- ftd.image:
+if: { code-block.download != NULL }
+src: $assets.files.static.download.svg
+src if { code-block.download-mouse-in }: $assets.files.static.download-hover.svg
+width.fixed.px: 20
+height.fixed.px: 20
+$on-mouse-enter$: $ftd.set-bool($a = $code-block.download-mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $code-block.download-mouse-in, v = false)
+$on-click$: $download-text(filename = $code-block.download, text = $code-block.package-name)
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.text:
+if: { ftd.dark-mode }
+text: $code-block.package-name
+width: fill-container
+role: $code-font
+color: $inherited.colors.text
+padding-top.px: 10
+padding-left.px: 20
+padding-bottom.px: 10
+padding-right.px: 20
+background.solid: $code-bg-dark
+border-top-left-radius.px if {$code-block.caption == NULL}: 4
+border-top-right-radius.px if {$code-block.caption == NULL}: 4
+border-bottom-left-radius.px: 4
+border-bottom-right-radius.px: 4
+;; border-width.px: 1
+;; border-color: $code-bg-dark
+overflow-x: auto
+max-height.fixed.px if { code-block.max-height != NULL }: $code-block.max-height
+max-width.fixed.px if { code-block.max-width != NULL }: $code-block.max-width
+
+-- ftd.text:
+if: { !ftd.dark-mode}
+text: $code-block.package-name
+width: fill-container
+role: $code-font
+color: $inherited.colors.text
+padding-top.px: 10
+padding-left.px: 20
+padding-bottom.px: 10
+padding-right.px: 20
+background.solid: #eff1f5
+border-top-left-radius.px if {$code-block.caption == NULL}: 4
+border-top-right-radius.px if {$code-block.caption == NULL}: 4
+border-bottom-left-radius.px if {$code-block.caption == NULL}: 4
+border-bottom-right-radius.px if {$code-block.caption == NULL}: 4
+border-color: $inherited.colors.background.step-1
+border-width.px: 0
+overflow-x: auto
+overflow-y: auto
+max-height.fixed.px if { code-block.max-height != NULL }: $code-block.max-height
+max-width.fixed.px if { code-block.max-width != NULL }: $code-block.max-width
+
+-- end: ftd.column
+
+-- end: code-block
