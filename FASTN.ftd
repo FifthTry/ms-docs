@@ -3,10 +3,8 @@
 -- fastn.package: fifthtry.github.io/ms-docs
 download-base-url: https://raw.githubusercontent.com/fifthtry/ms-docs/main
 
--- fastn.dependency: fifthtry.github.io/code-block
 -- fastn.dependency: fifthtry.github.io/doc-site
 -- fastn.dependency: fifthtry.github.io/typography
 
--- fastn.auto-import: fifthtry.github.io/code-block as cb
 -- fastn.auto-import: fifthtry.github.io/typography as tf
 -- fastn.auto-import: fifthtry.github.io/doc-site as ds
