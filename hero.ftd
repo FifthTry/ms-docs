@@ -41,7 +41,6 @@ Below are different hero components you can use as per your UI need.
 
 -- ftd.column:
 width: fill-container
-margin-top.px: 24
 
 -- ds.h2: Hero Without Image
 

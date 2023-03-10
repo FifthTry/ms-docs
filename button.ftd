@@ -1,0 +1,133 @@
+
+
+
+-- component button-docs:
+children components:
+
+-- ftd.column:
+width: fill-container
+
+-- ds.h1: Button Components
+
+To use button components, add below fastn dependency to FASTN.ftd file.
+
+
+-- ds.code:
+lang: ftd
+
+\-- fastn.dependency: fifthtry.github.io/wireframe-ms
+
+-- ds.markdown:
+
+After adding above line into your `FASTN.ftd` file. Add below line to your `ftd`
+file where you want to use this component.
+
+-- ds.code:
+lang: ftd
+
+\-- import: fifthtry.github.io/wireframe-ms/button
+
+
+-- ds.markdown:
+
+Below are different button components you can use as per your UI need.
+
+
+-- ftd.column:
+width: fill-container
+
+-- ds.h2: Primary Button
+
+Copy below code to your `.ftd` file where you imported button component. Change 
+below parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- button: PRIMARY
+role: primary
+large: true
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $button-docs.components.0
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Secondary Button
+
+Copy below code to your `.ftd` file where you imported button component. Change 
+below parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- button: SECONDARY
+role: secondary
+large: true
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $button-docs.components.1
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Tertiary Button
+
+Copy below code to your `.ftd` file where you imported button component. Change 
+below parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- button: TERTIARY
+role: tertiary
+large: true
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $button-docs.components.2
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: button-docs
+
+
+
+
+
+
+
+
+
