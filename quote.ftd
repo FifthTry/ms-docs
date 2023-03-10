@@ -1,7 +1,10 @@
+-- import: fifthtry.github.io/ms-docs
+-- import: fifthtry.github.io/ms-docs/assets
 
 
 
--- component quotes-docs:
+
+-- component quote-docs:
 children components:
 
 -- ftd.column:
@@ -53,7 +56,7 @@ logo: $assets.files.static.fifthtry.svg
 -- ds.rendered.output:
 
 -- ms-docs.child-wrap:
-child: $quotes-docs.components.0
+child: $quote-docs.components.0
 
 -- end: ds.rendered.output
 
@@ -85,7 +88,7 @@ people's thinking.
 -- ds.rendered.output:
 
 -- ms-docs.child-wrap:
-child: $quotes-docs.components.1
+child: $quote-docs.components.1
 
 -- end: ds.rendered.output
 
@@ -115,7 +118,7 @@ If you look at what you don't have in life, you'll never have enough.
 -- ds.rendered.output:
 
 -- ms-docs.child-wrap:
-child: $quotes-docs.components.2
+child: $quote-docs.components.2
 
 -- end: ds.rendered.output
 
@@ -125,7 +128,7 @@ child: $quotes-docs.components.2
 
 -- end: ftd.column
 
--- end: quotes-docs
+-- end: quote-docs
 
 
 
