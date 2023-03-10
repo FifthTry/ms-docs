@@ -1,0 +1,27 @@
+
+
+-- ds.page: Master components for documentation
+
+This library contains different master set components documetation UI.
+
+
+
+
+
+
+
+
+
+
+
+-- component child-wrap:
+ftd.ui child:
+
+-- ftd.column:
+width: fill-container
+
+-- child-wrap.child:
+
+-- end: ftd.column
+
+-- end: child-wrap
