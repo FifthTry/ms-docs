@@ -1,15 +1,15 @@
 
 
 
--- component button-docs:
+-- component quotes-docs:
 children components:
 
 -- ftd.column:
 width: fill-container
 
--- ds.h1: Button Components
+-- ds.h1: Quote Components
 
-To use button components, add below fastn dependency to FASTN.ftd file.
+To use quote components, add below fastn dependency to FASTN.ftd file.
 
 
 -- ds.code:
@@ -25,34 +25,35 @@ file where you want to use this component.
 -- ds.code:
 lang: ftd
 
-\-- import: fifthtry.github.io/wireframe-ms/button
+\-- import: fifthtry.github.io/wireframe-ms/quote
 
 
 -- ds.markdown:
 
-Below are different button components you can use as per your UI need.
+Below are different quote components you can use as per your UI need.
 
 
 -- ftd.column:
 width: fill-container
 
--- ds.h2: Primary Button
+-- ds.h2: `charcoal` quote 
 
-Copy below code to your `.ftd` file where you imported button component. Change 
+Copy below code to your `.ftd` file where you imported quote component. Change 
 below parameters as per your need.
 
 -- ds.rendered:
 
 -- ds.rendered.input:
 
-\-- button.button: PRIMARY
-role: primary
-large: true
+\-- quote.charcoal: Amit Upadhyay
+label: CEO
+avatar: $assets.files.static.amitu.jpg
+logo: $assets.files.static.fifthtry.svg
 
 -- ds.rendered.output:
 
 -- ms-docs.child-wrap:
-child: $button-docs.components.0
+child: $quotes-docs.components.0
 
 -- end: ds.rendered.output
 
@@ -66,7 +67,7 @@ width: fill-container
 spacing.fixed.px: 24
 margin-top.px: 24
 
--- ds.h2: Secondary Button
+-- ds.h2: `marengo` quote
 
 Copy below code to your `.ftd` file where you imported button component. Change 
 below parameters as per your need.
@@ -75,14 +76,16 @@ below parameters as per your need.
 
 -- ds.rendered.input:
 
-\-- button.button: SECONDARY
-role: secondary
-large: true
+\-- quote.marengo: Steve Jobs
+
+Your time is limited, so don't waste it living someone else's life. 
+Don't be trapped by dogma – which is living with the results of other 
+people's thinking.
 
 -- ds.rendered.output:
 
 -- ms-docs.child-wrap:
-child: $button-docs.components.1
+child: $quotes-docs.components.1
 
 -- end: ds.rendered.output
 
@@ -95,7 +98,7 @@ width: fill-container
 spacing.fixed.px: 24
 margin-top.px: 24
 
--- ds.h2: Tertiary Button
+-- ds.h2: `marengo-hug` quote
 
 Copy below code to your `.ftd` file where you imported button component. Change 
 below parameters as per your need.
@@ -104,14 +107,15 @@ below parameters as per your need.
 
 -- ds.rendered.input:
 
-\-- button.button: TERTIARY
-role: tertiary
-large: true
+\-- quote.marengo-hug: Oprah Winfrey
+
+If you look at what you have in life, you'll always have more.
+If you look at what you don't have in life, you'll never have enough.
 
 -- ds.rendered.output:
 
 -- ms-docs.child-wrap:
-child: $button-docs.components.2
+child: $quotes-docs.components.2
 
 -- end: ds.rendered.output
 
@@ -121,7 +125,7 @@ child: $button-docs.components.2
 
 -- end: ftd.column
 
--- end: button-docs
+-- end: quotes-docs
 
 
 
