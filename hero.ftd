@@ -1,0 +1,121 @@
+-- import: fifthtry.github.io/ms-docs/assets
+-- import: fifthtry.github.io/ms-docs
+
+
+
+
+
+
+
+
+-- component hero-docs:
+children components:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+
+-- ds.h1: Hero Components
+
+To use hero components, add below fastn dependency to FASTN.ftd file.
+
+-- ds.code:
+lang: ftd
+
+\-- fastn.dependency: fifthtry.github.io/wireframe-ms
+
+-- ds.markdown:
+
+After adding above line into your `FASTN.ftd` file. Add below line to your `ftd`
+file where you want to use this component.
+
+-- ds.code:
+lang: ftd
+
+\-- import: fifthtry.github.io/wireframe-ms/hero
+
+
+-- ds.markdown:
+
+Below are different hero components you can use as per your UI need.
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 24
+
+-- ds.h2: Hero Without Image
+
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.hero-without-image: Title of the hero component
+cta-text-1: Get Started
+cta-link-1: /
+cta-text-2: Shop now
+cta-link-2: /
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna.
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $hero-docs.components.0
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Hero With Image
+
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.hero-with-image: Title of the hero component
+cta-text-1: Get Started
+cta-link-1: /
+cta-text-2: Shop now
+cta-link-2: /
+image: $assets.files.hero-image.svg
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna.
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $hero-docs.components.1
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero-docs
+
+
+
+
+
+
+
+
