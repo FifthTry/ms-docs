@@ -1,0 +1,360 @@
+-- import: fifthtry.github.io/ms-docs/assets
+-- import: fifthtry.github.io/ms-docs
+
+
+-- component header-docs:
+children components:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+
+-- ds.h1: Header Components
+
+Display your branding, navigation, search, and more with these header components.
+To use header components, add below fastn dependency to FASTN.ftd file.
+
+-- ds.code:
+lang: ftd
+
+\-- fastn.dependency: fifthtry.github.io/wireframe-ms
+
+-- ds.markdown:
+
+After adding above line into your `FASTN.ftd` file. Add below line to your `ftd`
+file where you want to use this component.
+
+-- ds.code:
+lang: ftd
+
+\-- import: fifthtry.github.io/wireframe-ms/header
+
+
+-- ds.markdown:
+
+Below are different header component examples you can use as per your UI need.
+
+-- ftd.column:
+width: fill-container
+
+-- ds.h2: Simple Header
+
+Copy below code to your `.ftd` file where you imported this component. 
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.simple-header: Sitename
+logo: $assets.files.static.ftd-logo.svg
+links: $sitemap.sections
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $header-docs.components.0
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Simple Header Center
+
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.simple-header-center: Sitename
+logo: $assets.files.static.ftd-logo.svg
+links: $sitemap.sections
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $header-docs.components.1
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Simple Header Left
+
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.simple-header-left: Sitename
+logo: $assets.files.static.ftd-logo.svg
+links: $sitemap.sections
+cta-text: Button
+cta-link: header/
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $header-docs.components.2
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Advanced Header
+
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.advanced-header: Sitename
+logo: $assets.files.static.ftd-logo.svg
+links: $sitemap.sections
+cta-text: Button
+cta-link: header/
+icons: $list-of-icons-and-links
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $header-docs.components.3
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Header with Search
+
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.header-with-search: Sitename
+logo: $assets.files.static.ftd-logo.svg
+links: $sitemap.sections
+cta-text: Button
+cta-link: header/
+icons: $list-of-icons-and-links
+placeholder: Label
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $header-docs.components.4
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Header with CTA
+
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.header-with-cta: Sitename
+logo: $assets.files.static.ftd-logo.svg
+links: $sitemap.sections
+cta-text-1: Button
+cta-link-1: header/
+cta-text-2: Button
+cta-link-2: header/
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $header-docs.components.5
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Dashboard Header
+
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.dashboard-header: Sitename
+logo: $assets.files.static.ftd-logo.svg
+links: $sitemap.sections
+icons: $list-of-icons-and-links
+user: $assets.files.static.avatar.svg
+user-link: header/
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $header-docs.components.6
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Dashboard Header Searchable
+
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.dashboard-header-searchable: Sitename
+logo: $assets.files.static.ftd-logo.svg
+links: $sitemap.sections
+icons: $list-of-icons-and-links
+user: $assets.files.static.avatar.svg
+user-link: header/
+placeholder: Label
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $header-docs.components.7
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Humburger Header
+
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.hamburger-header: Sitename
+logo: $assets.files.static.ftd-logo.svg
+links: $sitemap.sections
+icons: $list-of-icons-and-links
+user: $assets.files.static.avatar.svg
+user-link: header/
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $header-docs.components.8
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ds.h2: Balanced Header
+
+Copy below code to your `.ftd` file where you imported this component. Change below
+parameters as per your need.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- hero.balanced-header: Sitename
+logo: $assets.files.static.ftd-logo.svg
+links: $sitemap.sections
+cta-text: Button
+cta-link: header/
+
+-- ds.rendered.output:
+
+-- ms-docs.child-wrap:
+child: $header-docs.components.9
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: header-docs
+
+
+
+
+
+
+
+
